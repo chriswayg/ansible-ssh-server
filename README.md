@@ -16,9 +16,9 @@ None
 * `ssh_server_protocol`: [default: `2`]: Specifies the protocol versions `ssh` should support in order of preference. The possible values are `1` and `2`. Multiple versions must be comma-separated. The default is `2,1`. This means that ssh tries version 2 and falls back to version 1 if version 2 is not available
 * `ssh_server_listen_address:`: [default: `['0.0.0.0', '::']`]: Specifies the local addresses `sshd` should listen on
 * `ssh_server_host_keys:`: [default: `[/etc/ssh/ssh_host_rsa_key, /etc/ssh/ssh_host_dsa_key, /etc/ssh/ssh_host_ecdsa_key, /etc/ssh/ssh_host_ed25519_key]` depending on OS version, see `defaults/main.yml`]: Specifies a file containing a private host key used by SSH
-* `ssh_server_server_key_bits:`: [default: `1024` or `768` depending on OS version, see `defaults/main.yml`]: Defines the number of bits in the ephemeral protocol version 1 server key
+* `ssh_server_server_key_bits:`: [default: `1024` or `768` depending on OS version, see `defaults/main.yml`]: Defines the number of bits in the ephemeral protocol version 1 server key - deprecated in Debian 9 stretch
 * `ssh_server_use_privilege_separation`: [default: `true`]: Specifies whether `sshd` separates privileges by creating an unprivileged child process to deal with incoming network traffic. After successful authentication, another process will be created that has the privilege of the authenticated user. The goal of privilege separation is to prevent privilege escalation by containing any corruption within the unprivileged processes
-* `ssh_server_key_regeneration_interval`: [default: `3600`]: In protocol version 1, the ephemeral server key is automatically regenerated after this many seconds (if it has been used)
+* `ssh_server_key_regeneration_interval`: [default: `3600`]: In protocol version 1, the ephemeral server key is automatically regenerated after this many seconds (if it has been used) - deprecated in Debian 9 stretch
 * `ssh_server_syslog_facility`: [default: `AUTH`]: Gives the facility code that is used when logging messages from `sshd`
 * `ssh_server_log_level`: [default: `INFO`]: Gives the verbosity level that is used when logging messages from `sshd`
 * `ssh_server_login_grace_time`: [default: `120`]: The server disconnects after this time if the user has not successfully logged in
