@@ -48,7 +48,7 @@ None
 * `ssh_server_tcp_keep_alive`: [default: `true`]: Specifies whether the system should send TCP keepalive messages to the other side
 * `ssh_server_use_login`: [default: `false`]: Specifies whether `login` is used for interactive login sessions
 * `ssh_server_max_startups`: [default: `'10:30:60'`]: Specifies the maximum number of concurrent unauthenticated connections to the SSH daemon. Additional connections will be dropped until authentication succeeds or the `LoginGraceTime` expires for a connection
-* `ssh_server_banner`: [default: `none`]: The contents of the specified file are sent to the remote user before authentication is allowed
+* `ssh_server_banner`: [default: `none`]: The contents of the specified file are displayed to the remote user before authentication is allowed
 * `ssh_server_ciphers`: [optional, default: `[]`]: Specifies the ciphers allowed for protocol version 2
 * `ssh_server_key_algorithms`: [optional, default: `[]`]: Specifies the available KEX (Key Exchange)	algorithms
 * `ssh_server_ciphers`: [optional, default: `[]`]: Specifies the available MAC (message authentication code) algorithms. The MAC algorithm is used in protocol version 2 for data integrity protection

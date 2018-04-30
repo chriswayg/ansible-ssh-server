@@ -49,6 +49,12 @@
     - ssh-server
     - ssh-server-configuration
 
+- name: Add a warning Banner shown before SSH login.
+  copy:
+    src: issue.net
+    dest: "{{ ssh_server_banner }}"
+  when: ssh_server_banner != "none"
+
 - name: start and enable service
   service:
     name: ssh
