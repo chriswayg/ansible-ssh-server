@@ -30,7 +30,7 @@ LogLevel {{ ssh_server_log_level }}
 
 # Authentication:
 LoginGraceTime {{ ssh_server_login_grace_time }}
-PermitRootLogin {{ ssh_server_permit_root_login }}
+PermitRootLogin {{ 'yes' if ssh_server_permit_root_login else 'no'}}
 StrictModes {{ 'yes' if ssh_server_strict_modes else 'no' }}
 
 ## Deprecated in Debian 9 stretch
