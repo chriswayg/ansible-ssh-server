@@ -49,7 +49,7 @@
     - ssh-server
     - ssh-server-configuration
 
-- name: Add a warning Banner shown before SSH login.
+- name: Add a warning banner, shown before SSH login.
   copy:
     src: issue.net
     dest: "{{ ssh_server_banner }}"
